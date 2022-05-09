@@ -8,20 +8,20 @@
 import SwiftUI
 
 enum ViewMode: Int {
-  case grid
-  case table
+    case grid
+    case table
 }
 
 struct ContentView: View {
-    @State private var viewMode: ViewMode = .grid
+    @SceneStorage("eventType") var eventType: EventType?
+    @SceneStorage("searchText") var searchText = ""
+    @SceneStorage("viewMode") var viewMode: ViewMode = .grid
     @EnvironmentObject var appState: AppState
-    @State private var eventType: EventType? = .events
-    @State private var searchText = ""
     
     var events: [Event] {
-      appState.dataFor(eventType: eventType, searchText: searchText)
+        appState.dataFor(eventType: eventType, searchText: searchText)
     }
-
+    
     
     var windowTitle: String {
         if let eventType = eventType {
@@ -34,9 +34,9 @@ struct ContentView: View {
         NavigationView {
             SidebarView(selection: $eventType)
             if viewMode == .table {
-              TableView(tableData: events)
+                TableView(tableData: events)
             } else {
-              GridView(gridData: events)
+                GridView(gridData: events)
             }
         }
         .frame(
@@ -48,9 +48,14 @@ struct ContentView: View {
             maxHeight: .infinity)
         .navigationTitle(windowTitle)
         .toolbar(id: "mainToolbar") {
-          Toolbar(viewMode: $viewMode)
+            Toolbar(viewMode: $viewMode)
         }
         .searchable(text: $searchText)
+        .onAppear {
+            if eventType == nil {
+                eventType = .events
+            }
+        }
     }
 }
 
