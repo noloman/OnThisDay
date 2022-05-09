@@ -12,6 +12,8 @@ struct OnThisDayApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+        .commands {
+            Menus()
         }
     }
 }
