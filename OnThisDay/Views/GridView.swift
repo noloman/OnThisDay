@@ -29,9 +29,3 @@ struct GridView: View {
         .padding(.vertical)
     }
 }
-
-//struct GridView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GridView(gridData: events)
-//    }
-//}
