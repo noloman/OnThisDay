@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		322C83C4282C4BE600D1D495 /* DayPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C83C3282C4BE600D1D495 /* DayPickerView.swift */; };
 		328C90B92829791A00AE8BF4 /* Menus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328C90B82829791A00AE8BF4 /* Menus.swift */; };
 		328C90BB28297C1700AE8BF4 /* DisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328C90BA28297C1700AE8BF4 /* DisplayMode.swift */; };
 		328C90BE28297E3C00AE8BF4 /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328C90BD28297E3C00AE8BF4 /* Toolbar.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		322C83C3282C4BE600D1D495 /* DayPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickerView.swift; sourceTree = "<group>"; };
 		328C90B82829791A00AE8BF4 /* Menus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menus.swift; sourceTree = "<group>"; };
 		328C90BA28297C1700AE8BF4 /* DisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMode.swift; sourceTree = "<group>"; };
 		328C90BD28297E3C00AE8BF4 /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				32CE028B2829678400EFD22C /* EventView.swift */,
 				32CE028F282974E700EFD22C /* GridView.swift */,
 				328C90BF282986EA00AE8BF4 /* TableView.swift */,
+				322C83C3282C4BE600D1D495 /* DayPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				328C90B92829791A00AE8BF4 /* Menus.swift in Sources */,
 				32CE02872829647D00EFD22C /* Networker.swift in Sources */,
 				32CE02822829647500EFD22C /* Day.swift in Sources */,
+				322C83C4282C4BE600D1D495 /* DayPickerView.swift in Sources */,
 				32CE02892829660300EFD22C /* SidebarView.swift in Sources */,
 				32CE026E2829636C00EFD22C /* ContentView.swift in Sources */,
 				32CE02812829647500EFD22C /* EventLink.swift in Sources */,

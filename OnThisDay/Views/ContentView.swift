@@ -16,12 +16,15 @@ struct ContentView: View {
     @SceneStorage("eventType") var eventType: EventType?
     @SceneStorage("searchText") var searchText = ""
     @SceneStorage("viewMode") var viewMode: ViewMode = .grid
+    @SceneStorage("selectedDate") var selectedDate: String?
     @EnvironmentObject var appState: AppState
     
     var events: [Event] {
-        appState.dataFor(eventType: eventType, searchText: searchText)
+      appState.dataFor(
+        eventType: eventType,
+        date: selectedDate,
+        searchText: searchText)
     }
-    
     
     var windowTitle: String {
         if let eventType = eventType {
