@@ -11,6 +11,7 @@ struct SidebarView: View {
     @EnvironmentObject var appState: AppState
     @AppStorage("showTotals") var showTotals = true
     @Binding var selection: EventType?
+    @SceneStorage("selectedDate") var selectedDate: String?
     
     var body: some View {
         VStack {
@@ -23,6 +24,25 @@ struct SidebarView: View {
                             )
                     }
                 }
+                // 1
+                Section("AVAILABLE DATES") {
+                  // 2
+                  ForEach(appState.sortedDates, id: \.self) { date in
+                    // 3
+                    Button {
+                      selectedDate = date
+                    } label: {
+                      // 4
+                      HStack {
+                        Text(date)
+                        Spacer()
+                      }
+                    }
+                    // 5
+                    .controlSize(.large)
+                  }
+                }
+
             }
             .listStyle(.sidebar)
         }.frame(minWidth: 220)
